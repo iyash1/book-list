@@ -4,7 +4,7 @@ import { BookContext } from '../contexts/BookContext';
 const BookDetails = ({book}) => {
     const {dispatch} = useContext(BookContext);
     return ( 
-        <li onClick={() => dispatch({type: 'REMOVE_BOOK', id: book.id})}>
+        <li className="list-group-item" onClick={() => dispatch({type: 'REMOVE_BOOK', id: book.id})}>
             <div className="title">{book.title}</div>
             <div className="author">{book.author}</div>
 

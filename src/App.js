@@ -6,7 +6,7 @@ import NewBookForm from './components/BookForm';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <BookContextProvider>
         <Navbar />
         <BookList />

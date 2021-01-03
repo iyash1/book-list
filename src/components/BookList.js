@@ -5,8 +5,8 @@ import BookDetails from './BookDetails';
 const BookList = () => {
     const {books} = useContext(BookContext)
     return books.length ? ( 
-        <div className="book-list">
-            <ol>
+        <div>
+            <ol className="list-group">
                 {books.map(book => {
                     return (
                         <BookDetails book={book} key={book.id} />
@@ -15,8 +15,10 @@ const BookList = () => {
             </ol>
         </div>
      ) : (
-        <div className="empty">
-            <p>No books to read. Hello free time :) </p>
+        <div className="card">
+            <div className="card-body">
+                <p className="card-title text-center h4">No books to read. Hello free time :) </p>
+            </div>
         </div>
      );
 }
